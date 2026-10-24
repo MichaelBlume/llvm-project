@@ -66,7 +66,7 @@ struct __bounded_iter {
   //
   // Such an iterator points past the end of an empty range, so it is not dereferenceable.
   // Operations like comparison and assignment are valid.
-  _LIBCPP_HIDE_FROM_ABI __bounded_iter() = default;
+  _LIBCPP_HIDE_FROM_ABI _LIBCPP_CONSTEXPR_SINCE_CXX14 __bounded_iter() _NOEXCEPT : __current_(), __begin_(), __end_() {}
 
   _LIBCPP_HIDE_FROM_ABI __bounded_iter(__bounded_iter const&) = default;
   _LIBCPP_HIDE_FROM_ABI __bounded_iter(__bounded_iter&&)      = default;
